@@ -1,0 +1,21 @@
+dmRbarPlot              Creates simple Bar Plot/histogram or stack bars
+                        for Data in Matrix Format
+dmRbarProps             Returns the Colors, Angles, and Densities to be
+                        Used in the Stack Bar
+dmRCenterMap		Display accrual data on actual google map
+dmRcolPercentsPie       display summary visit tables columns in pie
+                        charts
+dmRcrfBarPlot           Creates Bar Plot for Data in Matrix Format
+dmRcrfs                 Creates Time Plot and Bar Plot for Incoming
+                        CRFs
+dmRctQcs                Creates multiple plots showing summary of QCs
+                        for each center
+dmRfreqTable            Display summary visit tables and pie charts
+dmRlegend               Add Legends to Plots
+dmRlegScales            Scales Used in Legends Function
+dmRmergeDataModule      Merges study data with visit Map
+dmRqcsPerPlate          Creates Stack Bar to Display QCs per Plate
+dmRrowPercentsPie       Display summary visit tables rows in pie charts
+dmRvisitSchedule        Creates visit schedule summary tables and pie
+                        charts
+dmRwkToDate             Converts Week of the Year to Calendar Date
