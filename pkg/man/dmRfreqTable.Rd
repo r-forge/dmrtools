@@ -3,9 +3,8 @@
 \title{Display summary visit tables and pie charts }
 \description{This function displays summary visit tables  and produces summary tables and pie charts for quick and comprehensible view}
 \usage{
-dmRfreqTable(mat,pieChartsOrNot,colorPie=NULL,colPlt=TRUE)
-#or
-dmRfreqTable(mat,pieChartsOrNot,colorPie=NULL,rowPlt=TRUE)
+dmRfreqTable(mat = mat, pieChartsOrNot = pieChartsOrNot, colorPie =
+                 NULL, colPlt = NULL, rowPlt = NULL)
 
 }
 \arguments{

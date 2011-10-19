@@ -3,12 +3,12 @@
 \title{Creates visit schedule summary tables and pie charts}
 \description{This function creates  visit schedule summary table and pie charts; this function also utilizes the subject data and visit map to construct the table and bar charts}
 \usage{
-dmRvisitSchedule(visitMapDat,studyDat,typeOfVisits,dateFormat,colPlt=TRUE)
-#or
-dmRvisitSchedule(visitMapDat,studyDat,typeOfVisits,dateFormat,rowPlt=TRUE)
+dmRvisitSchedule( visMapDat = visMapDat, studyDat = studyDat,
+                 typeOfVisits = typeOfVisits, dateFormat = dateFormat,
+                 colPlt = NULL, rowPlt = NULL)
 }
 \arguments{
-\item{visitMapDat}{visitMapDat is visit map data }
+\item{visMapDat}{visMapDat is visit map data }
 \item{studyDat}{studyDat is study data }
 \item{typeOfVisits}{type of visits}
 \item{dateFormat}{dateFormat is study date format, European format dates in "d/m/y",  }

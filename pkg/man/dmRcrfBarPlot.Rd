@@ -5,7 +5,7 @@
   it is used to display number of incoming CRFs per month 
 }
 \usage{
-dmRcrfBarPlot(shMatrix,titleOfPlot="Number of Incoming CRFs per Month",ylab="\% of Incoming CRFs",isColor=TRUE)
+dmRcrfBarPlot(shMatrix,titleOfPlot=NULL,ylab=NULL,isColor=FALSE)
 }
 \arguments{
 \item{shMatrix}{shMatrix information Matrix }

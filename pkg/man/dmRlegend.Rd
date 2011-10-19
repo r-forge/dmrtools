@@ -2,13 +2,6 @@
 \alias{dmRlegend}
 \title{Add legends to plots}
 \usage{
-dmRlegend(x, y = NULL, legend, fill = NULL, col = "black", lty, lwd, pch,
-       angle = NULL, density = NULL, bty = "o", bg = par("bg"),
-       pt.bg = NA, cex = 1, xjust = 0, yjust = 1,
-       x.intersp = 1, y.intersp = 1, adj = c(0, 0.5),
-       text.width = NULL, text.col = par("col"),
-       merge = do.lines && has.pch, trace = FALSE,
-       plot = TRUE, ncol = 1, horiz = FALSE)
 }
 \description{
   This function modified by Zekai Otles from original legend function from graphics package,
@@ -22,7 +15,7 @@ dmRlegend(x, y = NULL, legend, fill = NULL, col = "black", lty, lwd, pch,
 }
 \seealso{
 \code{\link{dmRbarPlot}}, \code{\link{dmRlegScales}},
-  \code{\link{matPlot}}, \code{\link{matPoints}}, 
+  \code{\link{matplot}}, \code{\link{matpoints}}, 
   \code{\link{plot}}, \code{\link{barplot}},  \code{\link{legend}}, and
   \code{\link{graphics}} 
 }

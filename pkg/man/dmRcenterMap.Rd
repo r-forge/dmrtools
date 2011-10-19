@@ -7,7 +7,7 @@
 
 }
 \usage{
-	dmRcenterMap(centerData=centerData,outFile=outFile,tmpDir=tmpDir)
+	dmRcenterMap(centerData=centerData,outFile=NULL,tmpDir=NULL)
 
 }
 \arguments{
@@ -24,7 +24,7 @@ Loecher, M., (2010).
 \emph{ Plotting on Google Static Maps in R }.  Sense Networks, markus@sensenetworks.com
 }
 \seealso{
-\code{\link{RgoogleMaps}}, \code{\link{rgdal}} and \code{\link{sp}}
+\code{\link{RgoogleMaps}}, \code{\link{GDALinfo}} and \code{\link{sp}}
 }
 
 \examples{

@@ -3,7 +3,8 @@
 \title{Merges study data with visit map}
 \description{This function prepares data for merging visit map file and study data}
 \usage{
-dmRmergeDataModule(visMapDat,studyDat,baselineMat,dateFormat="d/m/y")
+dmRmergeDataModule(visMapDat = visMapDat, studyDat = studyDat,
+                 baselineMat = baselineMat, dateFormat = dateFormat)
 }
 \arguments{
 \item{visMapDat}{Vist map data }
