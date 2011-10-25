@@ -26,6 +26,17 @@
 
 dmRcrfs<-function(sh,freq="daily",isImageSave=FALSE,imageType=NULL,imageSize=NULL,tmpDir=NULL,layoutOpt=NULL){
   library("chron")
+
+if(is.null(tmpDir)){
+	if(.Platform$OS.type=="windows"){
+		tmpDir<-"C:/temp/"
+	}else{
+	tmpDir<-"/tmp/"}
+}
+
+
+
+
   dateValues<-array(1:length(sh$year))
   numOfRows<-length(sh$year)
   if(freq=="weekly"){
