@@ -32,8 +32,15 @@ dmRctQcs<-function(shMatrix,colNames=NULL,isImageSave=FALSE,devType=NULL,tmpDir=
   library("xtable")
 
 
+if(is.null(tmpDir)){
+	if(.Platform$OS.type=="windows"){
+		tmpDir<-"C:/temp/"
+	}else{
+	tmpDir<-"/tmp/"}
+}
 
 
+#prepare this as a matrix
   if(!is.null(colNames)){
     colnames(shMatrix)<-colNames
   }
@@ -106,13 +113,8 @@ for(pltIndx in 1:3){
       ts1<-xtable(t(shMatrix[1,]),caption="Summary Report of Records")
       ts1Matrix<-shMatrix[1,]
 	}
-  if(is.null(tmpDir)){
-        dirPrefix="/tmp/"
-  }
-  else{
-         dirPrefix=tmpDir
-  }
-    
+  
+  
 
    list(shMatrix=shMatrix,matrixOut1=ts1Matrix,image=psFile)
 }
