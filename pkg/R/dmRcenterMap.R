@@ -28,7 +28,16 @@ library(RgoogleMaps)
 library(rgdal)
 library(sp)
 if(is.null(outFile))outFile="centerMap.png"
+
 if(is.null(tmpDir))tmpDir="/tmp"
+
+if(is.null(tmpDir)){
+  if(.Platform$OS.type=="windows"){
+		tmpDir<-"C:/temp"
+	}else{
+	tmpDir<-"/tmp"}
+}
+
 outFile<-paste(tmpDir,outFile,sep=.Platform$file.sep)
 mat<-centerData
 out<-MapBackground(lat=mat$Latitude, lon=mat$Longtitude, destfile=outFile, NEWMAP = TRUE, myTile, zoom = NULL, size = c(320,320), GRAYSCALE = FALSE )
