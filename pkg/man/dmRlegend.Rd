@@ -1,8 +1,6 @@
 \name{dmRlegend}
 \alias{dmRlegend}
 \title{Add legends to plots}
-\usage{
-}
 \description{
   This function modified by Zekai Otles from original legend function from graphics package,
  see details of legend function for usage and arguments 
