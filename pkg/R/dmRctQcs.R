@@ -25,19 +25,8 @@
 #this is done to allow images embedded in open office document
 #
 #written by zekai otles,  <otles@fstrf-wi.org>
-dmRctQcs<-function(shMatrix,colNames=NULL,isImageSave=FALSE,devType=NULL,tmpDir=NULL,
-		layoutOpt=NULL){
-  library("chron")
-  library("dmRTools")
-  library("xtable")
+dmRctQcs<-function(shMatrix,colNames=NULL){
 
-
-if(is.null(tmpDir)){
-	if(.Platform$OS.type=="windows"){
-		tmpDir<-"C:/temp/"
-	}else{
-	tmpDir<-"/tmp/"}
-}
 
 
 #prepare this as a matrix
@@ -45,20 +34,6 @@ if(is.null(tmpDir)){
     colnames(shMatrix)<-colNames
   }
 
-
-
-        if(isImageSave){
-          
-          psFile<-paste(tmpDir,"dmRctQcsX_out.ps",sep="")
-          postscript(file=psFile)
-        }else{
-          psFile<-NULL
-        }
-  
-	if(is.null(layoutOpt)){
-		layout(matrix(c(1,0,2,0,3,0), 3, 2, byrow = TRUE))
-	}else{
-  		layout(layoutOpt)}
 
 	
               
@@ -100,7 +75,6 @@ for(pltIndx in 1:3){
              dmRbarPlot(shMatx=sshMatrix,xlab=xLabel,ylab=yLabel,titleOfPlot=titleOfPlot,shadedOrNot=FALSE,beside=FALSE)
 }#end of pltIndx
 
-   if(isImageSave){dev.off()}
 #        
 #    shMatrix[nRows,1]<-"Total"
 #    colnames(shMatrix)<-gsub("%","\% ",colnames(shMatrix))
@@ -114,9 +88,8 @@ for(pltIndx in 1:3){
       ts1Matrix<-shMatrix[1,]
 	}
   
-  
 
-   list(shMatrix=shMatrix,matrixOut1=ts1Matrix,image=psFile)
+   list(shMatrix=shMatrix,matrixOut1=ts1Matrix)
 }
 
 

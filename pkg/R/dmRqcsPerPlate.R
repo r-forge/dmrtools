@@ -27,17 +27,10 @@
 
 dmRqcsPerPlate<-function(shMatrix=shMatrix,xCol=NULL,yCols=NULL,
 	xlab=NULL,ylab=NULL,
-	titleOfPlots=NULL,shadedOrNot=FALSE,isImageSave=FALSE,tmpDir=NULL,
-	layoutOpt=NULL){
+	titleOfPlots=NULL,shadedOrNot=FALSE){
   library("chron")
   scaleCex=0.5
 
-if(is.null(tmpDir)){
-	if(.Platform$OS.type=="windows"){
-		tmpDir<-"C:/temp/"
-	}else{
-	tmpDir<-"/tmp/"}
-}
 
 
 nRows<-length(shMatrix)
@@ -72,17 +65,6 @@ nRows<-length(shMatrix)
 	}#end of levIndx
 
 
-       if(isImageSave){
-          psFile<-paste(tmpDir,"dmRqcsPerPlate_out.ps",sep="")
-          postscript(file=psFile)
-        }else{
-          psFile<-NULL
-        }
-	
-	if(is.null(layoutOpt)){
-  		layout(matrix(c(1,1,2,2), 2, 2, byrow = TRUE))
-  	}else{
-	  	layout(layoutOpt)}
 
 	if(is.null(xlab)){xlab<-c("Plate Number","Plate Number")}
 	if(is.null(ylab)){ylab<-c("% QCs","Number Of QCs")}
@@ -90,8 +72,7 @@ nRows<-length(shMatrix)
      dmRbarPlot(shMatx=shMatx,xlab=xlab,ylab=ylab,titleOfPlot=titleOfPlots,
 		shadedOrNot=c(TRUE,TRUE),
                 beside=c(FALSE,TRUE),secondPlot=TRUE)
-     if(isImageSave){dev.off()}
-      list(matrixOut=shMatx,image=psFile)
+      list(matrixOut=shMatx)
 
 }
 

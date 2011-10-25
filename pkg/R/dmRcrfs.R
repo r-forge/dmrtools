@@ -24,16 +24,8 @@
 #written by zekai otles <otles@fstrf-wi.org>
 
 
-dmRcrfs<-function(sh,freq="daily",isImageSave=FALSE,imageType=NULL,imageSize=NULL,tmpDir=NULL,layoutOpt=NULL){
+dmRcrfs<-function(sh,freq="daily"){
   library("chron")
-
-if(is.null(tmpDir)){
-	if(.Platform$OS.type=="windows"){
-		tmpDir<-"C:/temp/"
-	}else{
-	tmpDir<-"/tmp/"}
-}
-
 
 
 
@@ -52,49 +44,6 @@ if(is.null(tmpDir)){
   days<-dates(sh$dates)
   sh$months<-months(days)
 
-  if(is.null(layoutOpt)){
-  	layout(matrix(c(1,2),2,1,byrow=TRUE))
-  }else{
-  	layout(layoutOpt)}
-
-  if(!is.null(imageSize)){
-	  width=imageSize[1]
-	  height=imageSize[2]
-	  units=imageSize[3]
-	  imageSizeSet<-TRUE
-   }
-   if(isImageSave){
-	   if(is.null(imageType)){
-		   suffix<-"ps"
-		   }else{
-		   suffix<-imageType
-	   }
-
-	   if(is.null(layoutOpt)){
-			psFile<-paste(tmpDir,paste("dmRcrfPerWk_out",suffix,sep="."),sep="")
-	   }else{
-			psFile<-paste(tmpDir,paste("dmRcrfPerWk_out%03d",suffix,sep="."),sep="")
-	   }
-
-	  if(imageType=="ps"){
-		if(!imageSizeSet){
-			postscript(file=psFile)
-		}else{
-			postscript(file=psFile,width=width,height=height)
-		}
-
-	   }
-	  if(imageType=="png"){
-		if(!imageSizeSet){
-			png(file=psFile)
-		}else{
-			png(file=psFile,width=width,height=height,units=units)
-		}
-	   }
-        }else{
-          psFile<-NULL
-        }
-  
 
 
   matplot(days,sh$incoming,type="l",xaxt="n",xlab="Months",col="blue",ylab="Number of Incoming CRFs ",ylim=c(1,max(sh$incoming)),main="Number of Incoming CRFs")
@@ -112,8 +61,7 @@ if(is.null(tmpDir)){
           }
 dmRcrfBarPlot(shMatrix,titleOfPlot="Number of Incoming CRFs per Month",ylab="% of Incoming CRFs",isColor=TRUE)
 
- if(isImageSave){dev.off()}
-   list(matrixOut=sh,binData=shMatrix,image=psFile)
+   list(matrixOut=sh,binData=shMatrix)
 	
 }
 
