@@ -32,6 +32,14 @@ dmRqcsPerPlate<-function(shMatrix=shMatrix,xCol=NULL,yCols=NULL,
   library("chron")
   scaleCex=0.5
 
+if(is.null(tmpDir)){
+	if(.Platform$OS.type=="windows"){
+		tmpDir<-"C:/temp/"
+	}else{
+	tmpDir<-"/tmp/"}
+}
+
+
 nRows<-length(shMatrix)
 #	#write a matrix for number of occuorrence of type of QCS
 	shMat<-shMatrix
