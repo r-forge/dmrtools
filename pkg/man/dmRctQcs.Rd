@@ -6,17 +6,11 @@
   showing summary report of external Qcs from each center
 }
 \usage{
-dmRctQcs( shMatrix, colNames = NULL, isImageSave = FALSE,
-                 devType = NULL, tmpDir = NULL, layoutOpt = NULL)
+dmRctQcs( shMatrix, colNames = NULL)
 }
 \arguments{
 \item{shMatrix}{Matrix input with header }
 \item{colNames}{Use this column names instead of Matrix column headers}
-\item{isImageSave}{Output image saved as postscript file when is TRUE, output as psFile }
-\item{devType}{Device type for graphical output }
-\item{tmpDir}{tmpDir=NULL  Unix system uses /tmp directory in WINDOWS
-  give  C:/temp/ forward slashes used and last one is required}
-\item{layoutOpt}{layoutOpt is layout option default is 3 figure in a page}
 }
 \seealso{
  \code{\link{dmRbarPlot}}, 
@@ -26,10 +20,7 @@ dmRctQcs( shMatrix, colNames = NULL, isImageSave = FALSE,
 library("dmRTools")
 data("dmRToolsData")
 dmRctQcs(ctQcsDat)
-#same as
-dmRctQcs(ctQcsDat,isImageSave=FALSE,tmpDir=NULL)
-#or
-#give colnames, and dir names for image to saved
-#dmRctQcs(ctQcsDat,colNames,isImageSave=TRUE,tmpDir=tmpDir)
+#give colnames
+#dmRctQcs(ctQcsDat,colNames)
 }
 \author{Zekai  Otles}

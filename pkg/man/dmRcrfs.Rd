@@ -4,16 +4,11 @@
 \description{This function creates  time plot for incoming CRFS
 }
 \usage{
-dmRcrfs(sh,freq,isImageSave,imageType,imageSize,tmpDir,layoutOpt)
+dmRcrfs(sh,freq)
 }
 \arguments{
 \item{sh}{sh  incoming crf data}
 \item{freq}{freq  is  incomig CRFs frequescy, could be weekly, daily, Monthly }
-\item{isImageSave}{image Save option, default is FALSE, no image saved}
-\item{tmpDir}{dir Name where the image will be saved }
-\item{layoutOpt}{layoutOpt is layout option default is 2 figure in a page}
-\item{imageType}{imageType is imageType default is a ps }
-\item{imageSize}{imageSize is imageSize default is a whatever }
 }
 
 \seealso{
@@ -26,13 +21,13 @@ dmRcrfs(sh,freq,isImageSave,imageType,imageSize,tmpDir,layoutOpt)
 library("dmRTools")
 data("dmRToolsData")
 #same as
-dmRcrfs(crfsWkDat,freq="weekly",isImageSave=FALSE,tmpDir=NULL)
+dmRcrfs(crfsWkDat,freq="weekly")
 #or
-dmRcrfs(crfsDlyDat,freq="daily",isImageSave=FALSE,tmpDir=NULL)
+dmRcrfs(crfsDlyDat,freq="daily")
 #or
-dmRcrfs(crfsMonDat,freq="monthly",isImageSave=FALSE,tmpDir=NULL)
+dmRcrfs(crfsMonDat,freq="monthly")
 #or
-dmRcrfs(crfsWkDat,freq="weekly",layoutOpt=matrix(c(1,0,2,0),2,2,byrow=TRUE))
+dmRcrfs(crfsWkDat,freq="weekly")
 
 }
 \author{Zekai  Otles}
