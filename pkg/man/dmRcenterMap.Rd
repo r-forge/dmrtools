@@ -17,7 +17,7 @@
 
 
 \item{outFile}{outFile is default is NULL, but it can be assigned for .png file}
-\item{tmpDir}{tmDir is default is /tmp, but it can be assigned }
+\item{tmpDir}{tmDir is default is /tmp in UNIX C:\temp on windows, but it can be assigned }
 }
 \references{
 Loecher, M., (2010). 
@@ -33,7 +33,7 @@ Loecher, M., (2010).
 	library(rgdal)
 	library(sp)
 	data(dmRToolsData)
-	#following will produce centerMap.png in /tmp dir.
+	#following will produce centerMap.png in tmp dir.
 	dmRcenterMap(centerDat)
 }
 \author{Zekai  Otles}
