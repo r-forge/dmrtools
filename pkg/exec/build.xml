@@ -1,0 +1,87 @@
+<project name="dmRToolsBuild" default="installPkg" basedir="../../">
+
+<property file="${basedir}/exec/build.properties"/>
+<property name="test.dir" value="${basedir}/tests"/>
+
+        <target name="Directories"  >
+		<echo>Build dmRTools Package </echo>
+		<echo>Which is the Rlibrary "${Rlibrary.dir}" </echo>
+		<echo>Which is the basedir "${basedir}" </echo>
+		<echo>Which is the testdir "${test.dir}" </echo>
+	</target>
+
+
+	<condition property="RargLine" value='CMD INSTALL --library=${Rlibrary.dir}'>
+		<isset property="Rlibrary.dir"/>
+	</condition>
+
+        <property name="RargLine" value='CMD INSTALL'/>
+
+        <target name="rlib">
+		<echo>Which is the Rlibrary ${Rlibrary.dir} </echo>
+		<echo>${RargLine}</echo>
+	</target>
+
+
+        <target name="clean" >
+      		<move todir="${backupTar.dir}">
+          		<fileset dir="${basedir}">
+              		<include name="dmrtools*tar*gz" />
+          		</fileset>
+      		</move>
+	</target>
+
+        <target name="cleanSetUpFiles" >
+		<delete file="RinstPkgs.txt"/>
+		<delete file="RlibPaths.txt"/>
+	</target>
+
+
+	<target name="build" >
+		<echo>Build dmRTools Package </echo>
+
+                <echo>"basedir="${basedir}</echo>
+                <exec dir="${basedir}" executable="/bin/sh">
+                <!--<exec dir="${basedir}" executable="/bin/sh"> -->
+                <arg line='-c "R CMD  build --binary ${basedir}/dmrtools/"'/>
+                </exec>
+
+	</target>
+
+       <target name="check" >
+		<echo>check dmRTools Package </echo>
+                <echo>"basedir="${basedir}</echo>
+                <exec dir="${basedir}" executable="/bin/sh">
+                <!--<exec dir="${basedir}" executable="/bin/sh"> -->
+                <arg line='-c "R CMD  check ${basedir}/dmrtools/"'/>
+                </exec>
+	</target>
+
+
+       <target name="pdf_help_pages" >
+		<echo>build pdf help pages dmRTools Package </echo>
+                <echo>"basedir="${basedir}</echo>
+                <exec dir="${basedir}/dmrtools/inst" executable="/bin/sh">
+                <!--<exec dir="${basedir}" executable="/bin/sh"> -->
+                <arg line='-c "R CMD Rd2pdf ${basedir}/dmrtools/"'/>
+                </exec>
+	</target>
+
+
+        <target name="installPkg" depends="check,build,pdf_help_pages" >
+		<echo>Build dmRTools Package </echo>
+		<echo>'R CMD INSTALL --library="${Rlibrary.dir}" '</echo>
+		<apply executable="R">
+		<arg line='${RargLine}'/>
+                 <fileset dir="${basedir}">
+                     <patternset>
+                         <include name="dmRTools*tar.gz"/>
+                     </patternset>
+                 </fileset>
+                 </apply>
+	</target>
+
+
+
+
+</project>
