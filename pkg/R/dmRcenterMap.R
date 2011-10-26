@@ -33,7 +33,7 @@ if(is.null(tmpDir))tmpDir="/tmp"
 
 if(is.null(tmpDir)){
   if(.Platform$OS.type=="windows"){
-		tmpDir<-"C:/temp"
+		tmpDir<-"C:\temp"
 	}else{
 	tmpDir<-"/tmp"}
 }
