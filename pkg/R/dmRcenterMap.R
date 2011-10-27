@@ -33,7 +33,7 @@ if(is.null(tmpDir))tmpDir="/tmp"
 
 if(is.null(tmpDir)){
   if(.Platform$OS.type=="windows"){
-		tmpDir<-"C:\temp"
+		tmpDir<-paste("C:","temp",sep=.Platform$file.sep)
 	}else{
 	tmpDir<-"/tmp"}
 }
