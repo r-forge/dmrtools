@@ -37,7 +37,7 @@
 	</target>
 
 
-	<target name="build" >
+	<target name="build" depends="cleanPdfHelp">
 		<echo>Build dmRTools Package </echo>
 
                 <echo>"basedir="${basedir}</echo>
@@ -48,7 +48,7 @@
 
 	</target>
 
-       <target name="check" >
+       <target name="check" depends="cleanPdfHelp">
 		<echo>check dmRTools Package </echo>
                 <echo>"basedir="${basedir}</echo>
                 <exec dir="${basedir}" executable="/bin/sh">
@@ -58,7 +58,12 @@
 	</target>
 
 
-       <target name="pdf_help_pages" >
+       <target name="cleanPdfHelp" >
+		<delete   file="${basedir}/dmrtools/inst/dmRTools.pdf"/>
+	</target>
+
+
+       <target name="pdf_help_pages" depends="cleanPdfHelp">
 		<echo>build pdf help pages dmRTools Package </echo>
                 <echo>"basedir="${basedir}</echo>
                 <exec dir="${basedir}/dmrtools/inst" executable="/bin/sh">
