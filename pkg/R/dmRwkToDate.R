@@ -22,7 +22,7 @@
 #This function converts a week of year to calendar date
 #written by Zekai Otles <otles@fstrf-wi.org>
 dmRwkToDate<-function(year,wk){
-library("chron")
+require("chron")
 	julDayBegin<-julian(1,1,year)
 	julDay<-julDayBegin+wk*7
         tmp<-unlist(month.day.year(julDay))

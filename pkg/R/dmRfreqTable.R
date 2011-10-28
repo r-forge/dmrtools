@@ -22,7 +22,7 @@
 #matrix already includes column sums and row sums
 #written by zekai otles <otles@fstrf-wi.org>
 "dmRfreqTable"<-function(mat=mat,pieChartsOrNot=pieChartsOrNot,colorPie=NULL,colPlt=NULL,rowPlt=NULL){
-  library("chron")
+  require("chron")
   library("dmRTools")
 
  if(is.null(colorPie))colorPie<-FALSE

@@ -25,7 +25,7 @@
 
 
 dmRcrfs<-function(sh,freq="daily"){
-  library("chron")
+  require("chron")
 
 
 

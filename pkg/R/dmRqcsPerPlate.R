@@ -28,7 +28,7 @@
 dmRqcsPerPlate<-function(shMatrix=shMatrix,xCol=NULL,yCols=NULL,
 	xlab=NULL,ylab=NULL,
 	titleOfPlots=NULL,shadedOrNot=FALSE){
-  library("chron")
+  require("chron")
   scaleCex=0.5
 
 

@@ -25,7 +25,7 @@
 #This function written by Zekai Otles <otles@fstrf-wi.org>
 
 dmRbarPlot<-function(shMatx=shMatx,xlab=xlab,ylab=ylab,titleOfPlot,shadedOrNot,beside,secondPlot=FALSE){
-  library("chron")
+  require("chron")
   library("dmRTools")
   scaleCex=0.5
 

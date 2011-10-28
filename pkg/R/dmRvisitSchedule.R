@@ -23,8 +23,8 @@
 #written by zekai otles <otles@fstrf-wi.org>
 "dmRvisitSchedule"<-function(visMapDat=visMapDat,studyDat=studyDat,
 typeOfVisits=typeOfVisits,dateFormat=dateFormat,colPlt=NULL,rowPlt=NULL){
-  library("xtable")
-  library("chron")
+  require("xtable")
+  require("chron")
   library("dmRTools")
 
 

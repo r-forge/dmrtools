@@ -22,7 +22,7 @@
 #which produces row percents from freq Table 
 #written by zekai otles <otles@fstrf-wi.org>
 "dmRrowPercentsPie"<-function(mat=mat,colorPie=NULL){
-  library("chron")
+  require("chron")
   library("dmRTools")
 
  if(is.null(colorPie))colorPie<-FALSE

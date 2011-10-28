@@ -28,9 +28,9 @@
   #AggDatMat is for actual  subject Data
   #Baseline Plate information stored in the baselineMat for the subjects
 
-  library("chron")
+  require("chron")
+  require("sqldf")
   library("dmRTools")
-  library("sqldf")
 
   
 

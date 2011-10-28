@@ -24,9 +24,9 @@
 #This function written by Zekai Otles otles@fstrf-wi.org
 
 "dmRcenterMap"<-function(centerData=centerData,outFile=NULL,tmpDir=NULL){
-library(RgoogleMaps)
-library(rgdal)
-library(sp)
+require(RgoogleMaps)
+require(rgdal)
+require(sp)
 if(is.null(outFile))outFile="centerMap.png"
 
 if(is.null(tmpDir))tmpDir="/tmp"

@@ -26,6 +26,7 @@
 #
 #written by zekai otles,  <otles@fstrf-wi.org>
 dmRctQcs<-function(shMatrix,colNames=NULL){
+require("xtable")
 
 
 
