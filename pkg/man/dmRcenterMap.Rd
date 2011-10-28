@@ -29,9 +29,9 @@ Loecher, M., (2010).
 
 \examples{
 	library(dmRTools)
-	library(RgoogleMaps)
-	library(rgdal)
-	library(sp)
+	require(RgoogleMaps)
+	require(rgdal)
+	require(sp)
 	data(dmRToolsData)
 	#following will produce centerMap.png in tmp dir.
 	dmRcenterMap(centerDat)

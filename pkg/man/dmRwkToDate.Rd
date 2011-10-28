@@ -13,7 +13,7 @@ dmRwkToDate(year,wk)
 }
 \examples{
 library("dmRTools")
-library("chron")
+require("chron")
 dateValue<-dmRwkToDate(1998,52)
 }
 \author{Zekai  Otles}

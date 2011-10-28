@@ -17,6 +17,7 @@ dmRctQcs( shMatrix, colNames = NULL)
           and \code{\link{xtable}}
 }
 \examples{
+require("xtable")
 library("dmRTools")
 data("dmRToolsData")
 dmRctQcs(ctQcsDat)

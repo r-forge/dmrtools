@@ -19,6 +19,8 @@ dmRvisitSchedule( visMapDat = visMapDat, studyDat = studyDat,
 \code{\link{sqldf}}
 }
 \examples{
+require("chron")
+require("sqldf")
 library("dmRTools")
 data("dmRToolsData")
 #examples from dmRToolsData
