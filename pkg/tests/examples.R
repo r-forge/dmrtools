@@ -16,8 +16,8 @@
 #
 
 #Running all the examples for package dmRTools
+require("utils")
 library("dmRTools")
-library("utils")
 data("dmRToolsData")
 example(dmRbarPlot)
 example(dmRbarProps)
