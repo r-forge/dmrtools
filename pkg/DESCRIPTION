@@ -1,7 +1,7 @@
 Package: dmRTools
 Version: 1.1.1
 Date: 2011-11-7
-Title: Data Management Reporting Tool Version 1.0.1
+Title: Data Management Reporting Tool Version 1.1.1
 Author@R: c(person("Zekai", "Otles",email = "otles@fstrf-wi.org"),role="aut",
              person("Pascal", "Groenen", role = "aut",
              email = "p.groenen@factory-cro.com"))
