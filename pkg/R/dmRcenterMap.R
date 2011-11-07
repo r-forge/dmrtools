@@ -29,14 +29,15 @@ require(rgdal)
 require(sp)
 if(is.null(outFile))outFile="centerMap.png"
 
-if(is.null(tmpDir))tmpDir="/tmp"
 
-if(is.null(tmpDir)){
-  if(.Platform$OS.type=="windows"){
-		tmpDir<-paste("C:","temp",sep=.Platform$file.sep)
-	}else{
-	tmpDir<-"/tmp"}
-}
+#if(is.null(tmpDir)){
+#  if(.Platform$OS.type=="windows"){
+#		tmpDir<-paste("C:","temp",sep=.Platform$file.sep)
+#	}else{
+#	tmpDir<-"/tmp"}
+#}
+
+tmpDir<-tempdir()
 
 outFile<-paste(tmpDir,outFile,sep=.Platform$file.sep)
 mat<-centerData
