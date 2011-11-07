@@ -17,7 +17,7 @@
 
 
 \item{outFile}{outFile is default is NULL, but it can be assigned for .png file}
-\item{tmpDir}{tmDir is default is /tmp in UNIX C:\\temp on windows, but it can be assigned }
+\item{tmpDir}{tmpDir is default is \/tmp in UNIX C:\\temp on windows, but it can be assigned }
 }
 \references{
 Loecher, M., (2010). 
