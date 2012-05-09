@@ -24,24 +24,19 @@
 #This function written by Zekai Otles otles@fstrf-wi.org
 
 "dmRcenterMap"<-function(centerData=centerData,outFile=NULL,tmpDir=NULL){
+library(dmRTools)
 require(RgoogleMaps)
 require(rgdal)
-require(sp)
+
 if(is.null(outFile))outFile="centerMap.png"
 
-
-#if(is.null(tmpDir)){
-#  if(.Platform$OS.type=="windows"){
-#		tmpDir<-paste("C:","temp",sep=.Platform$file.sep)
-#	}else{
-#	tmpDir<-"/tmp"}
-#}
 
 tmpDir<-tempdir()
 
 outFile<-paste(tmpDir,outFile,sep=.Platform$file.sep)
 mat<-centerData
-out<-MapBackground(lat=mat$Latitude, lon=mat$Longtitude, destfile=outFile, NEWMAP = TRUE, myTile, zoom = NULL, size = c(320,320), GRAYSCALE = FALSE )
+#out<-MapBackground(lat=mat$Latitude, lon=mat$Longtitude, destfile=outFile, NEWMAP = TRUE, myTile, zoom = NULL, size = c(320,320), GRAYSCALE = FALSE )
+out<-MapBackground(lat=mat$Latitude, lon=mat$Longtitude, destfile=outFile, NEWMAP = TRUE, zoom = NULL, size = c(320,320), GRAYSCALE = FALSE )
 total<-sum(mat$NumOfSubjects)
 normValues=10*(mat$NumOfSubjects/total)
 

@@ -2,7 +2,7 @@ dmRbarPlot              Creates simple Bar Plot/histogram or stack bars
                         for Data in Matrix Format
 dmRbarProps             Returns the Colors, Angles, and Densities to be
                         Used in the Stack Bar
-dmRCenterMap		Display accrual data on actual google map
+dmRcenterMap		Display accrual data on actual google map
 dmRcolPercentsPie       display summary visit tables columns in pie
                         charts
 dmRcrfBarPlot           Creates Bar Plot for Data in Matrix Format

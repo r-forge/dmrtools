@@ -24,14 +24,14 @@ Loecher, M., (2010).
 \emph{ Plotting on Google Static Maps in R }.  Sense Networks, markus@sensenetworks.com
 }
 \seealso{
-\code{\link{RgoogleMaps}}, \code{\link{GDALinfo}} and \code{\link{sp}}
+\code{\link[RgoogleMaps]{RgoogleMaps-package}}, \code{\link{GDALinfo}}, and \code{\link{sp}}
 }
 
 \examples{
 	library(dmRTools)
 	require(RgoogleMaps)
 	require(rgdal)
-	require(sp)
+#	require(sp)
 	data(dmRToolsData)
 	#following will produce centerMap.png in tmp dir.
 	dmRcenterMap(centerDat)
