@@ -10,7 +10,7 @@ Author: Zekai Otles  <otles@fstrf-wi.org>, with contributions from
 Maintainer: Zekai Otles  <otles@fstrf-wi.org>
 Depends: R (>= 2.14.0),chron,RgoogleMaps,rgdal,sp,sqldf,xtable,utils
 Imports: chron,RgoogleMaps,rgdal,sp,sqldf,xtable,utils
-Suggests: odfWeave
+#Suggests: odfWeave
 Description: Data Management Reporting Tools 
    This package can be used for a clinical trials data management systems.
    The clinical trial data could be monitored for accrual and performance of the sites.
